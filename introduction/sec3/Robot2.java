@@ -1,6 +1,6 @@
 class Robot2 {
     public static void main(String[] args){
-        Robot robot = new Robot();
+        Robot2 robot = new Robot2();
         robot.greeting("Hello");
         robot.greeting("Bye");
     }
