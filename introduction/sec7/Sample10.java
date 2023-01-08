@@ -4,7 +4,6 @@ class Sample10 {
         Outer:
         for (int i = 1; i < 6; i ++) {
 
-
             Inner:
             for (int j = 1; j < 6; j ++) {
                 if (i * j % 4 == 0) {

@@ -29,5 +29,6 @@ class dentaku2 {
             errFlag = false;
         }
 
+
     }
 }
