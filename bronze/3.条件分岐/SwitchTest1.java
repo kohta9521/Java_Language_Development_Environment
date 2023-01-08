@@ -11,6 +11,8 @@ public class SwitchTest1 {
             case 2:
                 System.out.println("two");
                 break;
+            default:
+                System.out.println("others");
         }
     }
 }
