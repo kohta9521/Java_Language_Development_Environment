@@ -1,5 +1,7 @@
 class Sample1 {
-    public static void main(String[] args) {
-        
+    String name;
+    public static void sayHello() {
+        System.out.println("Hi, I'm " + name);
     }
+
 }
