@@ -10,6 +10,35 @@ public class CatApp{
         while (true){
             System.out.println("1.集める 2.遊ぶ 3.終了");
             int select = sc.nextInt();
+            if (select == 3) {
+                System.out.println("***結果***");
+                for (Cat c :list) {
+                    System.out.println(c.showStatus());
+                }
+                System.out.println("また遊んでね。おしまい");
+                return;
+            }
+            if (select == 1) {
+                String type = TYPES[rand.nextInt(TYPES.length)];
+                System.out.printf("%s猫を見つけた!%n", type);
+                System.out.print("この猫に名前をつけてください");
+                String name = sc.next();
+                Cat cat = new Cat(name, type);
+                list.add(cat);
+                System.out.println(cat.name + "が仲間に加わった");
+            } else 
+            if (select == 2) {
+                if(list.size() == 0) {
+                    System.out.println("まだ遊び猫がいません。。。");
+                    continue;
+                }
+                for(int i = 0; i < list.size(); i ++) {
+                    System.out.printf("%d・・・%s%n", i, list.get(i).showStatus());
+                }
+                System.out.print("どの猫と遊びますか？");
+                int no = sc.nextInt();
+                list.get(no).play();
+            }
         }
     }
 }
